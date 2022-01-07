@@ -1,0 +1,2 @@
+tsc -w   watch  this comand wll wathch files and mage compile when changes
+
