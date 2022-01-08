@@ -1,4 +1,4 @@
-"use strict";
+import { Invoice5 } from "./classes/Invoice5.js";
 console.log("Diwanga Amasith");
 const character1 = "msrio";
 var input = document.querySelectorAll("input");
@@ -214,9 +214,10 @@ console.log(invoices);
 //ACCESS MODIFIERS
 // classes
 class Invoice2 {
-    // readonly client: string;   // this all so can
-    // private details: string;
-    // public amount: number;
+    // this all so can
+    // readonly client: string;   // can read outsideclz. but cant change
+    // private details: string;  // only can access inside class
+    // public amount: number;    //default behaviour
     constructor(// this is short cut. but 
     client, //must add access modifier in this way
     details, amount) {
@@ -234,5 +235,19 @@ let invoices2 = [];
 invoices.push(invOne2);
 invoices.push(invTwo2);
 invoices2.forEach(inv => {
+    console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
+});
+//........................................................................
+//Modules   different files for different task.  
+// we cacn use Es6 js module system. We can use TS here also. 
+//import Export
+//+==============
+// MODULE ACESS÷÷
+const invOne5 = new Invoice5('mario', 'work on the mario website', 250);
+const invTwo5 = new Invoice5('luigi', 'work on the luigi website', 300);
+let invoices5 = [];
+invoices5.push(invOne5);
+invoices5.push(invTwo5);
+invoices5.forEach(inv => {
     console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
 });

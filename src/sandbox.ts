@@ -1,3 +1,7 @@
+import {Invoice5} from "./classes/Invoice5.js" 
+
+
+
 console.log("Diwanga Amasith");
 const character1 = "msrio";
 var input = document.querySelectorAll("input");
@@ -373,3 +377,15 @@ class Invoice2 {
   // we cacn use Es6 js module system. We can use TS here also. 
   //import Export
   
+  //+==============
+  // MODULE ACESS÷÷
+  const invOne5 = new Invoice5('mario', 'work on the mario website', 250);
+  const invTwo5 = new Invoice5('luigi', 'work on the luigi website', 300);
+  
+  let invoices5: Invoice5[] = [];
+  invoices5.push(invOne5)
+  invoices5.push(invTwo5);
+  
+  invoices5.forEach(inv => {
+    console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
+  })
