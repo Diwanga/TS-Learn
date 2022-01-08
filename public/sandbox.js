@@ -214,9 +214,10 @@ console.log(invoices);
 //ACCESS MODIFIERS
 // classes
 class Invoice2 {
-    // readonly client: string;   // this all so can
-    // private details: string;
-    // public amount: number;
+    // this all so can
+    // readonly client: string;   // can read outsideclz. but cant change
+    // private details: string;  // only can access inside class
+    // public amount: number;    //default behaviour
     constructor(// this is short cut. but 
     client, //must add access modifier in this way
     details, amount) {
@@ -236,3 +237,18 @@ invoices.push(invTwo2);
 invoices2.forEach(inv => {
     console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
 });
+const me = {
+    name: "diwanga",
+    age: 30,
+    speak(text) {
+        console.log("sdffg");
+    },
+    spend(nu) {
+        return nu;
+    } // this imply the interface
+};
+console.log(me);
+const greetme = (person) => {
+    console.log("HELLO " + person.name);
+};
+greetme(me);
