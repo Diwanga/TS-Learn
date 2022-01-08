@@ -380,7 +380,7 @@ class Invoice2 {
   //+==============
   // MODULE ACESS÷÷
   const invOne5 = new Invoice5('mario', 'work on the mario website', 250);
-  const invTwo5 = new Invoice5('luigi', 'work on the luigi website', 300);
+  const invTwo5 = new Invoice5('luigi', 'FROM MODULE work on the luigi website', 300);
   
   let invoices5: Invoice5[] = [];
   invoices5.push(invOne5)
@@ -389,3 +389,6 @@ class Invoice2 {
   invoices5.forEach(inv => {
     console.log(inv.client, /*inv.details,*/ inv.amount, inv.format());
   })
+//==========================
+
+//Interfaces

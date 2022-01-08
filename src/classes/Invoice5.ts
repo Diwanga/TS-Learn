@@ -17,5 +17,6 @@
     }
   }
   
-  
+  //THis way 2 network request is generated.  i for sandbox and invoces5 
+  //we can use webpack to make it one file and only one request is requered
   

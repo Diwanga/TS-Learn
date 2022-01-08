@@ -244,7 +244,7 @@ invoices2.forEach(inv => {
 //+==============
 // MODULE ACESS÷÷
 const invOne5 = new Invoice5('mario', 'work on the mario website', 250);
-const invTwo5 = new Invoice5('luigi', 'work on the luigi website', 300);
+const invTwo5 = new Invoice5('luigi', 'FROM MODULE work on the luigi website', 300);
 let invoices5 = [];
 invoices5.push(invOne5);
 invoices5.push(invTwo5);
