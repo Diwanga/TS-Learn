@@ -1,5 +1,5 @@
 import {Invoice5} from "./classes/Invoice5.js" 
-
+import {HasFormatter} from "./interfaces/HasFormatter"
 
 
 console.log("Diwanga Amasith");
@@ -392,3 +392,38 @@ class Invoice2 {
 //==========================
 
 //Interfaces
+// Interfaces    // giving rules to omplement
+
+interface IsPerson {
+  name : string;
+  age : number;
+  speak(a: string): void;
+  spend(a : number) : number;
+
+
+}
+
+const me : IsPerson = {
+  name:"diwanga",
+  age:30,
+  speak(text : string):void {
+    console.log("sdffg")
+  },
+  spend(nu:number):number{
+    return nu;
+  } // this imply the interface
+}
+
+console.log(me);
+
+const greetme = (person : IsPerson) =>{
+console.log("HELLO "+person.name);
+}
+
+greetme(me);
+////////////////////  CLASSES + INTERFACES
+
+let docOne : HasFormatter;  //now we can store Invoice5 object in this variable. as it implement this interface        
+
+docOne = new Invoice5("DIwanga","SUPER",400);
+

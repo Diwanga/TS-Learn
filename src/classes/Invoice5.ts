@@ -1,5 +1,6 @@
+  import { HasFormatter } from "../interfaces/HasFormatter";
   // classes
-  export class Invoice5 {
+  export class Invoice5 implements HasFormatter{
     // this all so can
 
     // readonly client: string;   // can read outsideclz. but cant change
@@ -7,6 +8,7 @@
     // public amount: number;    //default behaviour
   
     constructor(  // this is short cut. but 
+      //properties
       readonly client: string,  //must add access modifier in this way
       private details: string, 
       public amount: number,
@@ -20,3 +22,4 @@
   //THis way 2 network request is generated.  i for sandbox and invoces5 
   //we can use webpack to make it one file and only one request is requered
   
+
