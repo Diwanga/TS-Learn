@@ -28,3 +28,4 @@ form.addEventListener('submit', (e: Event) => {
   
   list.render(doc, type.value, 'end');
 });
+
